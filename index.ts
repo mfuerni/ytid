@@ -22,7 +22,7 @@ export function ytid(){
       }
 
       // Preventing two consecutive underscores and hyphens
-      if ((selectedCharacter === '_' && id[i - 1] === '_') || (selectedCharacter === '-' && id[i - 1] === '-')) {
+      if (i >= 1 && ((selectedCharacter === '_' && id[i - 1] === '_') || (selectedCharacter === '-' && id[i - 1] === '-'))) {
         i--;
         continue;
       }
